@@ -75,16 +75,27 @@ public class EmailService : IEmailService
         List<EmailMessage> messages = new List<EmailMessage>();
         int totalMessages = inbox.Count;
 
-        // Calculate the starting index for pagination
-        int startIndex = (pageNumber - 1) * pageSize;
-        int endIndex = Math.Min(startIndex + pageSize, totalMessages);
+        // Fetch all email summaries
+        var summaries = await inbox.FetchAsync(0, -1, MessageSummaryItems.Full | MessageSummaryItems.UniqueId);
 
-        // Ensure the start index is within the bounds of the inbox
-        if (startIndex < totalMessages)
+        // Sort summaries by date in descending order
+        var sortedSummaries = summaries
+            .Where(summary => summary.Date != null)
+            .OrderByDescending(summary => summary.Date)
+            .ToList();
+
+        // Paginate
+        int startIndex = (pageNumber - 1) * pageSize;
+        int endIndex = Math.Min(startIndex + pageSize, sortedSummaries.Count);
+
+        // Ensure start index is within bounds
+        if (startIndex < sortedSummaries.Count)
         {
             for (int i = startIndex; i < endIndex; i++)
             {
-                var item = await inbox.GetMessageAsync(i); // Fetch the email message
+                var summary = sortedSummaries[i];
+                var item = await inbox.GetMessageAsync(summary.UniqueId); // Fetch the email message
+
                 var emailMessage = new EmailMessage
                 {
                     Id = item.MessageId,
@@ -99,4 +110,6 @@ public class EmailService : IEmailService
         emailClient.Disconnect(true);
         return messages;
     }
+
+
 }
