@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35507.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiEmailMessage", "WebApiEmailMessage\WebApiEmailMessage.csproj", "{351F21DE-991D-4334-8C0F-2A74E27DDF0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{351F21DE-991D-4334-8C0F-2A74E27DDF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{351F21DE-991D-4334-8C0F-2A74E27DDF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{351F21DE-991D-4334-8C0F-2A74E27DDF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{351F21DE-991D-4334-8C0F-2A74E27DDF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {891716A2-3A86-48B6-A3A1-1CFFB946CE12}
+	EndGlobalSection
+EndGlobal
