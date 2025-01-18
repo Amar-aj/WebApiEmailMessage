@@ -9,6 +9,7 @@ public interface IEmailService
 {
     Task<List<EmailMessage>> GetEmails();
     Task<List<EmailMessage>> GetEmails(int pageNumber = 1, int pageSize = 20);
+    Task<List<EmailFolder>> GetAllFoldersWithDetails();
 }
 
 public class EmailService : IEmailService
@@ -104,11 +105,106 @@ public class EmailService : IEmailService
                     Date = item.Date,
                 };
                 messages.Add(emailMessage);
+                emailMessage.ToAddresses.AddRange(item.To.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
+                emailMessage.FromAddresses.AddRange(item.From.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
+                emailMessage.CcAddresses.AddRange(item.Cc.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
+                emailMessage.BccAddresses.AddRange(item.Bcc.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
+
+                foreach (var attachment in item.Attachments)
+                {
+                    if (attachment is MimeKit.MimePart mimePart)
+                    {
+                        var fileName = mimePart.FileName;
+
+                        // Optional: Save the file locally
+                        string filePath = Path.Combine("attachments", fileName);
+                        Directory.CreateDirectory("attachments"); // Ensure directory exists
+                        using (var stream = File.Create(filePath))
+                        {
+                            await mimePart.Content.DecodeToAsync(stream);
+                        }
+
+                        // Calculate the size of the attachment
+                        long size = mimePart.Content.Stream?.Length ?? 0;
+
+                        emailMessage.Attachments.Add(new EmailAttachment
+                        {
+                            FileName = fileName,
+                            FilePath = filePath,
+                            Size = size, // Use calculated size
+                            ContentType = mimePart.ContentType.MimeType
+                        });
+                    }
+                }
             }
         }
 
         emailClient.Disconnect(true);
         return messages;
+    }
+
+    public async Task<List<string>> GetAllFolders()
+    {
+        using var emailClient = new ImapClient();
+        var username = _emailConfig.ImapUsername;
+        var password = _emailConfig.ImapPassword;
+
+        // Connect and authenticate
+        emailClient.Connect(_emailConfig.ImapServer, _emailConfig.ImapPort, true);
+        emailClient.AuthenticationMechanisms.Remove("XOAUTH2");
+        emailClient.AuthenticationMechanisms.Remove("NTLM");
+        emailClient.Authenticate(username, password);
+
+        // Get the personal namespace and fetch all folders
+        var folders = new List<string>();
+        foreach (var folder in emailClient.GetFolders(emailClient.PersonalNamespaces.First()))
+        {
+            folders.Add(folder.FullName);
+        }
+
+        emailClient.Disconnect(true);
+        return folders;
+    }
+
+    public async Task<List<EmailFolder>> GetAllFoldersWithDetails()
+    {
+        using var emailClient = new ImapClient();
+        var username = _emailConfig.ImapUsername;
+        var password = _emailConfig.ImapPassword;
+
+        emailClient.Connect(_emailConfig.ImapServer, _emailConfig.ImapPort, true);
+        emailClient.AuthenticationMechanisms.Remove("XOAUTH2");
+        emailClient.AuthenticationMechanisms.Remove("NTLM");
+        emailClient.Authenticate(username, password);
+
+
+        // Get the personal namespace and fetch all folders
+        var folders = new List<EmailFolder>();
+        foreach (var folder in emailClient.GetFolders(emailClient.PersonalNamespaces.First()))
+        {
+            try
+            {
+                await folder.OpenAsync(FolderAccess.ReadOnly); // Open folder in read-only mode to fetch details
+
+                var folderDetails = new EmailFolder
+                {
+                    Id = folder.Id,
+                    Name = folder.FullName,
+                    TotalMessages = folder.Count,
+                    UnreadMessages = folder.Unread,
+                };
+
+                folders.Add(folderDetails);
+            }
+            catch (ImapCommandException ex)
+            {
+                // Log the error and skip this folder
+                Console.WriteLine($"Skipping folder: {folder.FullName} - {ex.Message}");
+            }
+        }
+
+        emailClient.Disconnect(true);
+        return folders;
     }
 
 

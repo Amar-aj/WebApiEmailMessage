@@ -1,0 +1,362 @@
+[
+  {
+    "id": "2JOSe0dGq6jY93HwELm61w@notifications.google.com",
+    "toAddresses": [
+      {
+        "name": "",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Google",
+        "address": "no-reply@accounts.google.com"
+      }
+    ],
+    "subject": "Security alert",
+    "body": "[image: Google]\r\nApp password created to sign in to your account\r\n\r\n\r\namaradya143@gmail.com\r\nIf you didn't generate this password for MyTestApp, someone might be using\r\nyour account. Check and secure your account now.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=amaradya143@gmail.com&continue=https://myaccount.google.com/alert/nt/1737127824712?rfn%3D20%26rfnc%3D1%26eid%3D8299363822665452453%26et%3D0>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2025 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n",
+    "date": "2025-01-17T15:30:24+00:00"
+  },
+  {
+    "id": "1cCFpXoJyB5xOvvfJRdbLw@notifications.google.com",
+    "toAddresses": [
+      {
+        "name": "",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Google",
+        "address": "no-reply@accounts.google.com"
+      }
+    ],
+    "subject": "Security alert",
+    "body": "[image: Google]\r\nApp password used to sign in was removed\r\n\r\n\r\namaradya143@gmail.com\r\nIf you didn't remove this password, someone might be using your account.\r\nCheck and secure your account now.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=amaradya143@gmail.com&continue=https://myaccount.google.com/alert/nt/1737127814110?rfn%3D269%26rfnc%3D1%26eid%3D-5713040536345334052%26et%3D0>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2025 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n",
+    "date": "2025-01-17T15:30:14+00:00"
+  },
+  {
+    "id": "Mc6I8ti2t6KPGHu69ZOK7w@notifications.google.com",
+    "toAddresses": [
+      {
+        "name": "",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Google",
+        "address": "no-reply@accounts.google.com"
+      }
+    ],
+    "subject": "Security alert",
+    "body": "[image: Google]\r\nApp password created to sign in to your account\r\n\r\n\r\namaradya143@gmail.com\r\nIf you didn't generate this password for MyMailApp, someone might be using\r\nyour account. Check and secure your account now.\r\nCheck activity\r\n<https://accounts.google.com/AccountChooser?Email=amaradya143@gmail.com&continue=https://myaccount.google.com/alert/nt/1737127754155?rfn%3D20%26rfnc%3D1%26eid%3D6755095087505166737%26et%3D0>\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2025 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n",
+    "date": "2025-01-17T15:29:14+00:00"
+  },
+  {
+    "id": "B3YHZrBHWdW036bYBzI2sQ@notifications.google.com",
+    "toAddresses": [
+      {
+        "name": "",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Google",
+        "address": "no-reply@accounts.google.com"
+      }
+    ],
+    "subject": "2-Step Verification turned on",
+    "body": "[image: Google]\r\n2-Step Verification turned on\r\n\r\n\r\namaradya143@gmail.com\r\n\r\nYour Google Account amaradya143@gmail.com is now protected with 2-Step\r\nVerification. When you sign in on a new or untrusted device, you’ll need\r\nyour second factor to verify your identity.\r\n\r\n*Don't get locked out!*\r\nYou can add a backup phone or get backup codes to use when you don’t have\r\nyour second factor with you.\r\nYou can review your 2SV settings\r\n<https://accounts.google.com/AccountChooser?Email=amaradya143@gmail.com&continue=https://myaccount.google.com/signinoptions/two-step-verification?rfn%3D16%26rfnc%3D1%26eid%3D8852111489121927038%26et%3D0>\r\nto make changes.\r\nYou can also see security activity at\r\nhttps://myaccount.google.com/notifications\r\nYou received this email to let you know about important changes to your\r\nGoogle Account and services.\r\n© 2025 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA\r\n",
+    "date": "2025-01-17T15:28:16+00:00"
+  },
+  {
+    "id": "a68b3951-4dd6-4f42-8b65-b07aea4142b7@facebookmail.com",
+    "toAddresses": [
+      {
+        "name": "Kubera Mahanta",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Facebook friend suggestions",
+        "address": "friendsuggestion@facebookmail.com"
+      }
+    ],
+    "subject": "👤 Angel Priti Priti is a new friend suggestion for you",
+    "body": "========================================\r\nFind more friends\r\nhttps://www.facebook.com/nd/?friends%2Fcenter%2F&aref=1736952928538693&medium=email&mid=62bbf94b60d73G5afbee0ef73cG62bbfde4c1045G114&bcode=2.1736952931.AbzO7zHYCoICiPT75lU&n_m=amaradya143%40gmail.com&n_sg=Q6bPBAFFBYNuiYuntRRsVJZ30tEkzkEa8zC-r_wzEg_6FdcZQQ&lloc=cta_text&rms=v2&irms=1\r\n\r\n========================================\r\n\r\nHi Kubera,\r\n\r\nAdd the people you know to see their photos and updates.\r\n\r\nThanks,\r\nThe Facebook team\r\n\r\n\r\n\r\n========================================\r\nThis message was sent to amaradya143@gmail.com. If you don't want to receive these emails from Meta in the future, please follow the link below to unsubscribe.\r\nhttps://www.facebook.com/o.php?k=AS2zOAcbharPjMtKoGk&u=100038077249340&mid=62bbf94b60d73G5afbee0ef73cG62bbfde4c1045G114&ee=AY0H3rEUsRHhtv7x85Vs_vE1qruDy5Odw62xcwZtpzLIjK-8XnTw3DamCj9i6DAfk-dhmfwNhJ6HsFmgMSDW\r\nMeta Platforms, Inc., Attention: Community Support, 1 Meta Way, Menlo Park, CA 94025\r\nTo help keep your account secure, please don't forward this email. Follow the link below to learn more.\r\nhttps://www.facebook.com/email_forward_notice/?mid=62bbf94b60d73G5afbee0ef73cG62bbfde4c1045G114\r\n\r\n",
+    "date": "2025-01-15T06:55:31-08:00"
+  },
+  {
+    "id": "NM622EFC3A50930F90Dadobein_mid_prod8@mail.adobe.com",
+    "toAddresses": [
+      {
+        "name": "",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Adobe for Photographers",
+        "address": "mail@mail.adobe.com"
+      }
+    ],
+    "subject": "Try our editing sliders on your own photo",
+    "body": "View web version:\r\nhttps://t-info.mail.adobe.com/r/?id=ta631ba41,fe6f4226,c02375b0&e=cDE9JTQweG9BbEUzYlFBMjNKSGtLSWhXbnoyOTFDMUZxd3RENlFIbjVXdDExSFloMCUzRA&s=EpQ8hM91ipztOO3pGNr3ezJsDD8eT1maKXcLFGg6bZM\r\n\r\nUnfortunately, your email client cannot display HTML or your settings are turned off. To view this email, please click or copy and paste the link above into your browser.\r\n******************************************************************\r\nThis is a marketing email from Adobe Systems Software Ireland Limited, 4-6 Riverwalk, Citywest Business Park, Dublin 24, Ireland.\r\n\r\nClick on the following link to unsubscribe, or send us an unsubscribe request to the postal address above.\r\nClick&nbsp;here:  https://t-info.mail.adobe.com/r/?id=ta631ba41,fe6f4226,c02375b1&e=cDE9JTQwMmlLV2s0S292QnQzJTJGWkh4SVM5WWtSam5IRUlidDZtVyUyRk1kRGclMkY0UVpVSSUzRCZwMj0mbG9jPWluJnAzPTIx&s=Zw8dujcvn_MN7GtHoGG32-YRkn9gTtDGmpDwchCUE6o  \r\n\r\nPlease review the Adobe Privacy Policy.\r\nhttps://t-info.mail.adobe.com/r/?id=ta631ba41,fe6f4226,c02375b2\r\n\r\nTo ensure future delivery of email, please add mail@mail.adobe.com to your address book, contacts, or safe senders list.\r\nhttps://t-info.mail.adobe.com/r/?id=ta631ba41,fe6f4226,c02375b3\r\n\r\nPlease do not reply to this message. To contact Adobe,find options online.\r\nhttps://t-info.mail.adobe.com/r/?id=ta631ba41,fe6f4226,c02375b4\r\n",
+    "date": "2025-01-12T17:46:47-08:00"
+  },
+  {
+    "id": "6783e5a1.050a0220.fdd2c.8368SMTPIN_ADDED_MISSING@mx.google.com",
+    "toAddresses": [
+      {
+        "name": "Kubera Mahanta",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Jhumi on Facebook",
+        "address": "friendupdates@facebookmail.com"
+      }
+    ],
+    "subject": "💬 Jhumi Bankira Hembrom commented on her photo",
+    "body": "Hi Kubera,\r\n\r\n💬 Jhumi Bankira Hembrom commented on her photo\r\n\r\nThanks,\r\nThe Facebook team\r\n\r\n\r\n\r\n========================================\r\nThis message was sent to amaradya143@gmail.com. If you don't want to receive these emails from Meta in the future, please follow the link below to unsubscribe.\r\nhttps://www.facebook.com/o.php?k=AS3YPSqNKDO-d3_Yr-8&u=100038077249340&mid=62b840b85f00fG5afbee0ef73cG62b84551bf2e1G207c&ee=AY1MCfJRkwEwsJMA4elO9GMXUp7ktzXKk5Wvtuk-ZQ24f9muJZP6vOwOAUo85sYbZDQfxxOqYC2dzEvsfXDF\r\nMeta Platforms, Inc., Attention: Community Support, 1 Meta Way, Menlo Park, CA 94025\r\nTo help keep your account secure, please don't forward this email. Follow the link below to learn more.\r\nhttps://www.facebook.com/email_forward_notice/?mid=62b840b85f00fG5afbee0ef73cG62b84551bf2e1G207c\r\n\r\n",
+    "date": "2025-01-12T07:53:54-08:00"
+  },
+  {
+    "id": "143103800612226243a48359@mlsend.com",
+    "toAddresses": [
+      {
+        "name": "amaradya143@gmail.com",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Unlimited Video Service",
+        "address": "support@bluefx.net"
+      }
+    ],
+    "subject": "6h and it's gone",
+    "body": "Hello,\r\n\r\nYou have received a newsletter from Bluefx.\r\n\r\nHowever, your email software can't display HTML emails. You can view the newsletter by clicking here:\r\n\r\nhttps://bgmap.clicks.mlsend.com/ty/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MzEwMzc4NzM2MDMyMzQ3NyxcInJcIjoxNDMxMDM4MDA2MTIyMjYyNDN9IiwicyI6IjY2MTJlNGE1YTljZWI5NGQifQ\r\n\r\n\r\n\r\nYou're receiving this newsletter because you have shown interest in Bluefx.\r\nNot interested anymore? Click here to unsubscribe:\r\nhttps://bgmap.clicks.mlsend.com/ty/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MzEwMzc4NzM1ODIyNjMyNCxcInJcIjoxNDMxMDM4MDA2MTIyMjYyNDN9IiwicyI6ImRlZmMxMmI0ZGRlYjFmMjYifQ\r\n",
+    "date": "2025-01-10T02:01:05+00:00"
+  },
+  {
+    "id": "142983004759786699a48359@mlsend.com",
+    "toAddresses": [
+      {
+        "name": "amaradya143@gmail.com",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Unlimited Video Service",
+        "address": "support@bluefx.net"
+      }
+    ],
+    "subject": "tomorrow",
+    "body": "Hello,\r\n\r\nYou have received a newsletter from Bluefx.\r\n\r\nHowever, your email software can't display HTML emails. You can view the newsletter by clicking here:\r\n\r\nhttps://bgmap.clicks.mlsend.com/tl/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0Mjk4Mjk5Mjc5MzQzNzc5MyxcInJcIjoxNDI5ODMwMDQ3NTk3ODY2OTl9IiwicyI6ImJmNjA3MjJlYjc5NGMwY2YifQ\r\n\r\n\r\n\r\nYou're receiving this newsletter because you have shown interest in Bluefx.\r\nNot interested anymore? Click here to unsubscribe:\r\nhttps://bgmap.clicks.mlsend.com/tl/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0Mjk4Mjk5Mjc5MDI5MjA2MCxcInJcIjoxNDI5ODMwMDQ3NTk3ODY2OTl9IiwicyI6ImY2NGUzOThjNzIxMTE5N2QifQ\r\n",
+    "date": "2025-01-08T18:01:11+00:00"
+  },
+  {
+    "id": "142896203360634336a48359@mlsend.com",
+    "toAddresses": [
+      {
+        "name": "amaradya143@gmail.com",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "BlueFx Video Templates",
+        "address": "support@bluefx.net"
+      }
+    ],
+    "subject": "did you see this?",
+    "body": "Hello,\r\n\r\nYou have received a newsletter from Bluefx.\r\n\r\nHowever, your email software can't display HTML emails. You can view the newsletter by clicking here:\r\n\r\nhttps://bgmap.clicks.mlsend.com/tl/c/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0Mjg5NjE4Mjg4MDg5NjY0OCxcInJcIjoxNDI4OTYyMDMzNjA2MzQzMzZ9IiwicyI6ImFjOWQ5MTMzZjQ4MWU5YTAifQ\r\n\r\n\r\n\r\nYou're receiving this newsletter because you have shown interest in Bluefx.\r\nNot interested anymore? Click here to unsubscribe:\r\nhttps://bgmap.clicks.mlsend.com/tl/c/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0Mjg5NjE4Mjg3Nzc1MDkxOCxcInJcIjoxNDI4OTYyMDMzNjA2MzQzMzZ9IiwicyI6ImExNWFjZjU2ODQ4M2Q2OWIifQ\r\n",
+    "date": "2025-01-07T19:02:32+00:00"
+  },
+  {
+    "id": "F1gHSyJXQ2GKRHa3wKKTvA@geopod-ismtpd-12",
+    "toAddresses": [
+      {
+        "name": "",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Team Jio",
+        "address": "important@mailer.jio.com"
+      }
+    ],
+    "subject": "Important Alert: Protect Yourself from the Premium Rate Service Scam",
+    "body": "<!DOCTYPE html><html xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" lang=\"en\"><head><title></title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><style>\r\n*{box-sizing:border-box}body{margin:0;padding:0}a[x-apple-data-detectors]{color:inherit!important;text-decoration:inherit!important}#MessageViewBody a{color:inherit;text-decoration:none}p{line-height:inherit}.desktop_hide,.desktop_hide table{mso-hide:all;display:none;max-height:0;overflow:hidden}.image_block img+div{display:none}sub,sup{font-size:75%;line-height:0} @media (max-width:620px){.mobile_hide{display:none}.row-content{width:100%!important}.stack .column{width:100%;display:block}.mobile_hide{min-height:0;max-height:0;max-width:0;overflow:hidden;font-size:0}.desktop_hide,.desktop_hide table{display:table!important;max-height:none!important}}\r\n</style><!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup { mso-text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]--></head><body class=\"body\" style=\"background-color:#fff;margin:0;padding:0;-webkit-text-size-adjust:none;text-size-adjust:none\"><table class=\"nl-container\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"mso-table-lspace:0;mso-table-rspace:0;background-color:#fff\"><tbody><tr><td><table class=\"row row-1\" align=\"center\" \r\nwidth=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"mso-table-lspace:0;mso-table-rspace:0\"><tbody><tr><td><table class=\"row-content stack\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"mso-table-lspace:0;mso-table-rspace:0;color:#000;width:600px;margin:0 auto\" width=\"600\"><tbody><tr><td class=\"column column-1\" width=\"100%\" \r\nstyle=\"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;text-align:left;padding-bottom:5px;padding-top:5px;vertical-align:top;border-top:0;border-right:0;border-bottom:0;border-left:0\"><table class=\"image_block block-1\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"mso-table-lspace:0;mso-table-rspace:0\"><tr><td class=\"pad\" style=\"width:100%\"><div class=\"alignment\" align=\"center\" style=\"line-height:10px\"><div style=\"max-width:600px\"><img \r\nsrc=\"https://d1qzvqecfo5h8o.cloudfront.net/images/RK4-RWW-8R6Z/JioLogo-without-digital-life.png\" style=\"display:block;height:auto;border:0;width:100%\" width=\"600\" alt title height=\"auto\"></div></div></td></tr></table><table class=\"text_block block-2\" width=\"100%\" border=\"0\" cellpadding=\"10\" cellspacing=\"0\" role=\"presentation\" style=\"mso-table-lspace:0;mso-table-rspace:0;word-break:break-word\"><tr><td class=\"pad\"><div style=\"font-family:sans-serif\"><div class \r\nstyle=\"font-size:12px;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;mso-line-height-alt:14.399999999999999px;color:#555;line-height:1.2\"><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\">Dear Customer,</span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\">&nbsp;</span></p><p \r\nstyle=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\">At Jio, your safety and digital experience are our top priorities. We are reaching out to inform you about a growing scam that has been targeting mobile users across India – the <strong>Premium Rate Service Scam</strong>. This scam involves missed calls from international numbers, and we want to help you understand how it works and how to protect yourself.</span>\r\n</p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\">&nbsp;</span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\"><strong>What is the Premium Rate Service Scam?</strong></span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\">\r\n<span style=\"word-break: break-word; font-size: 14px;\">&nbsp;</span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\">This scam happens when you get a missed call from an unknown international number. Out of curiosity, you call back, only to connect to a premium-rate service. The charges for calling these international numbers are usually very high.</span></p><p \r\nstyle=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\">&nbsp;</span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\"><strong>How Does the Scam Work?</strong></span></p><ul style=\"text-align:justify;line-height:1.2;mso-line-height-alt:16.8px\"><li>\r\n<span style=\"word-break: break-word; font-size: 14px;\"><strong>Missed Call from an International Number</strong>: Scammers use unfamiliar international numbers to initiate the scam. You might receive a brief missed call from one of these numbers.</span></li><li><span style=\"word-break: break-word; font-size: 14px;\"><strong>Returning the Call</strong>: If you return the call, you will be connected to a premium-rate service, which may incur hefty charges even for a short conversation.</span></li>\r\n</ul><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\"><strong>How to Recognize the Scam</strong></span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:14.399999999999999px\">&nbsp;</p><ul style=\"text-align:justify;line-height:1.2;mso-line-height-alt:16.8px\"><li><p style=\"margin:0;font-size:14px;mso-line-height-alt:16.8px\">\r\n<span style=\"word-break: break-word; font-size: 14px;\"><strong>Missed Calls from Unfamiliar International Numbers</strong>: If you notice a missed call from an international number with an unfamiliar country code, it’s best not to return the call. Scammers often use international numbers to make it harder for you to recognize the scam.</span></p></li></ul><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:14.399999999999999px\">&nbsp;</p><p \r\nstyle=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\"><strong>How to Protect Yourself</strong></span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\">&nbsp;</span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\">\r\n<span style=\"word-break: break-word; font-size: 14px;\">Here are some simple steps to keep you safe:</span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:14.399999999999999px\">&nbsp;</p><ol style=\"text-align:justify\"><li><p style=\"margin:0;font-size:14px;mso-line-height-alt:16.8px\">\r\n<span style=\"word-break: break-word; font-size: 14px;\"><strong>Identify International Numbers</strong>: Any incoming call from a number starting with a country code other than \"+91\" is an international call. Avoid calling back unknown international numbers to prevent unnecessary charges.</span></p></li><li><p style=\"margin:0;font-size:14px;mso-line-height-alt:16.8px\">\r\n<span style=\"word-break: break-word; font-size: 14px;\"><strong>Block Suspicious Numbers</strong>: If you receive a missed call from a suspicious international number, block it immediately to prevent future attempts by scammers.</span></p></li><li><p style=\"margin:0;font-size:14px;mso-line-height-alt:16.8px\">\r\n<span style=\"word-break: break-word; font-size: 14px;\"><strong>Be Cautious of Unsolicited Calls</strong>: Always be cautious when receiving unsolicited calls, whether from unknown international or local numbers. It’s better to be safe than sorry.</span></p></li><li><p style=\"margin:0;font-size:14px;mso-line-height-alt:16.8px\">\r\n<span style=\"word-break: break-word; font-size: 14px;\"><strong>Educate Yourself and Others</strong>: Share this information with your friends, family, and colleagues. The more people are aware, the less likely the scam will succeed.</span></p></li></ol><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:14.399999999999999px\">&nbsp;</p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\">\r\n<span style=\"word-break: break-word; font-size: 14px;\">At Jio, we are committed to keeping your experience secure. Stay safe, stay informed, and protect yourself from scams.</span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\">&nbsp;</span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:16.8px\"><span style=\"word-break: break-word; font-size: 14px;\">Warm regards,</span><br>\r\n<span style=\"word-break: break-word; font-size: 14px;\">Team Jio</span></p><p style=\"margin:0;font-size:14px;text-align:justify;mso-line-height-alt:14.399999999999999px\">&nbsp;</p></div></div></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><!-- End --><img src=\"http://link.mailer.jio.com/wf/open?upn=u001.BcJ6Nc-2F8HPJXHomCn7hgh7TSWYJhJ0YoGcKWIbkFLHwbeHnWKUcnt45zWNuFAt1sUfMbwL20jWLfyela6JKzvinUhrPevzdUmTJINA4ScJ59F-2FjeOaW0Dqn-2BRgAqbCuyQb6X-2B2c9P3sz0OelrtAnLV8mmQlqc2jlWAwXPjiYdbFI5xSiEq5ogTf5cV6VQJekF6t9vLZKkvR4Ydx6Yq9HdmJlLrz3QmvsV2qOudUY9DK9doUWfGd1x1aMc3OPee8weomrUoFDvjF6717eBmEJuj0EVDp6k-2B83VMmhQ7IpjAEFDmIjmqOB9o-2BFVprmQuvBMQEwwgfSnUdQItyry7ObjnWydu2gM-2BP1W4QZgo530u-2FskdW-2Bsj6pwA5tZuBLQGyiCkfjV6i6uXi9NXLaOJxVH8jg1Q0Mt6IV-2Bb3mocNEihb-2FJFhEw14xSTc55s42WQwZwnSd1KGE19yqh2DwIMYA2K9yfKSohNpGocBdx1GZarE-3D\" alt=\"\" width=\"1\" height=\"1\" border=\"0\" style=\"height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;\"/></body></html><img  alt=\"\" border=\"0\" height=\"1\" width=\"1\" src=\"https://in1.wizrocketmail.net/r?e=KwgZfx9iZmN6YgB9DSZkfAAEAAxjaSw1KS0sNUwCAQdvaWR8ZiYSC0FVQkc%2BNTwUNDU9IFtVcXQray4uIT88P05%2BXkA%2BPDsoNi47JFwQZ10yLTcvKyFwPEhCWms%2BPnBxdWtleAQBBAZvbmoUZWpgfgIBAQN1dnA8LSg5FEJZR1sjeGhpICAgIG1UVFI2Lz4%2FdSc%3D&c=696844288\"></img>\r\n",
+    "date": "2025-01-07T13:09:34+00:00"
+  },
+  {
+    "id": "142801855035999682a48359@mlsend.com",
+    "toAddresses": [
+      {
+        "name": "amaradya143@gmail.com",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Unlimited Video Service",
+        "address": "support@bluefx.net"
+      }
+    ],
+    "subject": "your videos",
+    "body": "Hello,\r\n\r\nYou have received a newsletter from Bluefx.\r\n\r\nHowever, your email software can't display HTML emails. You can view the newsletter by clicking here:\r\n\r\nhttps://bgmap.clicks.mlsend.com/tj/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MjgwMTgyMzM5MjA3MzA1NSxcInJcIjoxNDI4MDE4NTUwMzU5OTk2ODJ9IiwicyI6IjI1OTM2OWRiZGExYTRlMWYifQ\r\n\r\n\r\n\r\nYou're receiving this newsletter because you have shown interest in Bluefx.\r\nNot interested anymore? Click here to unsubscribe:\r\nhttps://bgmap.clicks.mlsend.com/tj/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MjgwMTgyMzM4ODkyNzMyNCxcInJcIjoxNDI4MDE4NTUwMzU5OTk2ODJ9IiwicyI6ImRlMmVhNGM4NjM1N2FjNWYifQ\r\n",
+    "date": "2025-01-06T18:04:00+00:00"
+  },
+  {
+    "id": "677c03bc.a70a0220.199d43.5c91SMTPIN_ADDED_MISSING@mx.google.com",
+    "toAddresses": [
+      {
+        "name": "Kubera Mahanta",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Sonu on Facebook",
+        "address": "friendupdates@facebookmail.com"
+      }
+    ],
+    "subject": "⏰ Sonu Kumar just posted a story that expires in 24 hours",
+    "body": "========================================\r\nView other stories\r\nhttps://www.facebook.com/n/?aref=1736180644145117&medium=email&mid=62b0bc4f9650bG5afbee0ef73cG62b0c0e8f67ddG73a&bcode=2.1736180648.AbwwDMt8WG17ezl-OfY&n_m=amaradya143%40gmail.com&n_sg=Q6bPBAEOGhnF3sYscLm_hgAEow2iZOBFkz4AI0HUlaiZda0Xqw&lloc=email_button_view_other_stories_text&rms=v2&irms=1\r\n\r\n========================================\r\n\r\nHi Kubera,\r\n\r\nSee Sonu's recent story while it's still available.\r\n\r\nThanks,\r\nThe Facebook team\r\n\r\n\r\n\r\n========================================\r\nThis message was sent to amaradya143@gmail.com. If you don't want to receive these emails from Meta in the future, please follow the link below to unsubscribe.\r\nhttps://www.facebook.com/o.php?k=AS2kawC9VzC3G5sD33Y&u=100038077249340&mid=62b0bc4f9650bG5afbee0ef73cG62b0c0e8f67ddG73a&ee=AY3Eh7VC5CcxXSo3MKowu6g5mjXvobyk-gW-jMS30j9IUpl_6BBG8HnyiPOlhkiRzizwfBSyWjJszOh5ngy-\r\nMeta Platforms, Inc., Attention: Community Support, 1 Meta Way, Menlo Park, CA 94025\r\nTo help keep your account secure, please don't forward this email. Follow the link below to learn more.\r\nhttps://www.facebook.com/email_forward_notice/?mid=62b0bc4f9650bG5afbee0ef73cG62b0c0e8f67ddG73a\r\n\r\n",
+    "date": "2025-01-06T08:24:08-08:00"
+  },
+  {
+    "id": "NM61BFCDF88092961CAadobein_mid_prod8@mail.adobe.com",
+    "toAddresses": [
+      {
+        "name": "",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Adobe for Photographers",
+        "address": "mail@mail.adobe.com"
+      }
+    ],
+    "subject": "Elevate your photography game fast",
+    "body": "View web version:\r\nhttps://t-info.mail.adobe.com/r/?id=t925b3e70,fe88449e,c0208546&e=cDE9JTQwTzRZUnYybkw1a0ZEOW8xVWswc1pwY3I4SW9LRDBvMCUyQkxyVSUyRlNGTWFQVkElM0Q&s=sRhpH2UP5E_odd0yYRzTjDyVYNnn04I_BpO3MO1ZjUU\r\n\r\nUnfortunately, your email client cannot display HTML or your settings are turned off. To view this email, please click or copy and paste the link above into your browser.\r\n******************************************************************\r\nThis is a marketing email from Adobe Systems Software Ireland Limited, 4-6 Riverwalk, Citywest Business Park, Dublin 24, Ireland.\r\n\r\nClick on the following link to unsubscribe, or send us an unsubscribe request to the postal address above.\r\nClick&nbsp;here:  https://t-info.mail.adobe.com/r/?id=t925b3e70,fe88449e,c0208547&e=cDE9JTQwMmlLV2s0S292QnQzJTJGWkh4SVM5WWtWUFdpSU1IS09jSHBmWFVHcW5ZREpVJTNEJnAyPSZsb2M9aW4mcDM9MjE&s=Y6buW2cRfO0D9xYzcqxb3rK10mMR838mUamE7oS28Tk  \r\n\r\nPlease review the Adobe Privacy Policy.\r\nhttps://t-info.mail.adobe.com/r/?id=t925b3e70,fe88449e,c0208548\r\n\r\nTo ensure future delivery of email, please add mail@mail.adobe.com to your address book, contacts, or safe senders list.\r\nhttps://t-info.mail.adobe.com/r/?id=t925b3e70,fe88449e,c0208549\r\n\r\nPlease do not reply to this message. To contact Adobe,find options online.\r\nhttps://t-info.mail.adobe.com/r/?id=t925b3e70,fe88449e,c020854a\r\n",
+    "date": "2025-01-05T16:47:47-08:00"
+  },
+  {
+    "id": "677a96a7.170a0220.3a1aae.b804SMTPIN_ADDED_MISSING@mx.google.com",
+    "toAddresses": [
+      {
+        "name": "Kubera Mahanta",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Sonu on Facebook",
+        "address": "friendupdates@facebookmail.com"
+      }
+    ],
+    "subject": "⏰ Sonu Kumar just posted a story that expires in 24 hours",
+    "body": "========================================\r\nView other stories\r\nhttps://www.facebook.com/n/?aref=1736087188979423&medium=email&mid=62af6029cbc0dG5afbee0ef73cG62af64c32bedfG73a&bcode=2.1736087193.AbyHwbh8c9ACM6h70RI&n_m=amaradya143%40gmail.com&n_sg=Q6bPBAH_fNP4pncokhkqVv-fvYFSAF6AbTWdCmBpymyDF_fDIQ&lloc=email_button_view_other_stories_text&rms=v2&irms=1\r\n\r\n========================================\r\n\r\nHi Kubera,\r\n\r\nSee Sonu's recent story while it's still available.\r\n\r\nThanks,\r\nThe Facebook team\r\n\r\n\r\n\r\n========================================\r\nThis message was sent to amaradya143@gmail.com. If you don't want to receive these emails from Meta in the future, please follow the link below to unsubscribe.\r\nhttps://www.facebook.com/o.php?k=AS0x4Qc-DaXIzRnbCs8&u=100038077249340&mid=62af6029cbc0dG5afbee0ef73cG62af64c32bedfG73a&ee=AY19qrExd8ysGuMplriiLxDd0fElTCOcJUnNAUmP8yjiTP5W9O-GQEwK5oUZBMZTAOLxVNwcp429cG5V_TBS\r\nMeta Platforms, Inc., Attention: Community Support, 1 Meta Way, Menlo Park, CA 94025\r\nTo help keep your account secure, please don't forward this email. Follow the link below to learn more.\r\nhttps://www.facebook.com/email_forward_notice/?mid=62af6029cbc0dG5afbee0ef73cG62af64c32bedfG73a\r\n\r\n",
+    "date": "2025-01-05T06:26:33-08:00"
+  },
+  {
+    "id": "105d111a58883572c2bd55e4303bc725ffaae021-20335589-111589534@google.com",
+    "toAddresses": [
+      {
+        "name": "",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Google Pay",
+        "address": "googlepay-noreply@google.com"
+      }
+    ],
+    "subject": "Annual reminder about Google Pay’s Terms of Service, Consumer Policy and Privacy Policy",
+    "body": "Wishing you a great 2025! As you know we’re constantly looking for ways to improve the Google Pay experience. This email is an annual reminder to surface our terms and policies that help explain how you interact with the app and the protections in place for your privacy and security.\r\n\r\nThese terms are important because they’ll make it easier for you to understand what to expect from Google Pay – and what we expect from you – as you use our services. As required under applicable law, we would like to inform you that your access to, and use of the Google Pay (IN) app, operated by Google India Digital Services Limited is governed by\r\n\r\n• Google Pay Consumer Terms <https://notifications.google.com/g/p/ANiao5pXKuxBEmbNrAAUw-8F-ITmPYaZAeQ9ZRAMnbIjAHgqywfbf9yNrflFtdHvjTS0EHToBonqhnfLnpUI4_KQFCMG3RIyD8N-X52zWzdgnoT-gqV0mOtNmNU-Aq5HO-0RHkxb36_w6HtZtMrUKR6usWQ_OaTuhC-hLcFZJOL_Az8foMCLP6N4uih2neRai2QltSU55Pcv-OUFeGe4hN8tgmgMrtuMFjoV2s_XMyOWeqbsNGQSd1NWpSTJCe3Ucrmkm71aGBa94Ldq>\r\n\r\n• Google Pay Consumer Policy <https://notifications.google.com/g/p/ANiao5rdE1dV5PzjLZ_ts4_WZu_BkLdyQ7WV-7VWmT9TIoFivf4BzkZNhlULMkYnEWLGndh7mnyBfPU6aZaWAg9oQHiD9hcE3YgVk661t6plCyDsc3yOI-Dh87oDjW7czUTIRcivK1tyKtuCWfkzN8in9jaHpOiGijVLwxF9MP7be8C87PwmT0gp4UPWFS7qzwr_fzjOM_Gz2xN5oB9z8JgvMj90P_qilk3tK4S2Si2UgqqI9G5Rkvc5HdMtv3IriOFDY1M4vnJUn5bcy7M>\r\n\r\n• Google Privacy Policy <https://notifications.google.com/g/p/ANiao5pE2qW4DQ3GNPjkHIP4HrliljFFHH6cSBkh_2pt9mDCWPblt6GFdN7eQs8vo2BmLgj1TGFpEte14JEp-Pi-5YSWEP656qVY3XBLQx3X_l3LtOxrCLhmqKXtXOnuhqBFDaOJNFL8A9AdEKgfSYfQfRw5Ig6BjV8vvoPjXoPh0xr57QSHt7BfmhdnQuqv4sXvRJs0OKgX9YaLaWmFAUzDKx95NZKgPfCt5G_rZQzy-Wc2ddKaK7HZ2zN7>\r\n\r\nRemember, respecting these terms is crucial to a smooth experience and we are happy to help if you need further explanation. Please adhere to these terms to maintain continued use of and access to Google Pay. Violation of these terms and guidelines may result in warnings or further action including termination of access to the app, which we hope to avoid.\r\n\r\nYour trust and satisfaction mean everything to us. We hope you continue to enjoy a secure and helpful Google Pay experience.\r\n\r\nSincerely,\r\n\r\nThe Google Pay team\r\n\r\nStay in touch\r\n\r\nGiving you more places and ways to pay with Google Pay\r\n\r\n<https://notifications.google.com/g/p/ANiao5rDg7_wkv5r9dxyML8ZlcppwbRf0pD6w62cbNUd6GZEuJPR9OysX9S5MwvuoCl8MJPm4OWj7M8bFrVXGdl7XC9LUoN6qec7i-H3fu48q5cXjBHtPpswgyHonfOT1hSbHK_hBBZh08BZAmmqy8dmqTMj1onM5uXZIvKJ07DCVqmwvFqmou2LZpFkgj-025FNdNCzC80i3-MDA1nN0Xuq7qrddId6mcCD5WymIXDIPnhlvQU2FTjXClymhzYFOM-0vuKEJ8S9>\r\n\r\nHelp Center <https://notifications.google.com/g/p/ANiao5o53kdafX1Uh44ytDYwTlWWbxeB75a8YYLtlFcV4ucsM67lwx5oM67CJ_1WFJj_L-hwS7pJMCJYJy3L5Hlrn5_u_kgooc1py9gBNI50xKrKV457THUr0Ofl3gs4QmfA2r2y6qbRlDJ8-5zHI9QxLjm2-hXC1Y2M_Wkm7-6gBiELpgLtZOQPJmOj-P1xMrq-Ib5A0mWAkLn6gCv1SQ81EjBx_zZZgwFWr8BhHqhY86tSA0pVLBN09IAahx2Wn-eg>\r\n\r\n<https://notifications.google.com/g/p/ANiao5pgGOGBeXB_rQOzFpwLsPSX0RyMIVimGZVRMnDGKuBEhAUFy1gW_8hVS75McRQbeC2KP4hByh-Boxl20fA16R6OjmRtfI6jnJLmNTzLF-iUepYpSCYsAFSws55Y7YybIIpq6s9cpJg6LVFfIx7-y_iys8zL8OCT2iasmFxMBiFG7uiA8CKDyYU-19XacUJODqXKm6SvUv2hPUVV_TD5eU-bYpCERJKKYMGiH0oYtiwWq5C7M3IOeA>\r\n\r\nFacebook <https://notifications.google.com/g/p/ANiao5qYQnnY_sl6wFsV9eaGxiaKWdCtodJ1r_XJJoukukB21vFV1DemEdVCVvJ2_m-bSsIEH_aabj3KNO6hkn9ARHxO-KpwfAOkvXz9yKMk1SzRjnuj-9MUOYp7Y94U24CNixQMm-ksBxc4RN8kZaRl3GwpE_dr_5BeeyCmM5g74jK3ocuYN4KaRX78HNT6S0Hnn4eh1RyDK3DlOcMoHMLivVAu6Sb9KDSyNZtE9FicXtG2fA>\r\n\r\n<https://notifications.google.com/g/p/ANiao5pLjT94BbmV4vJ_DkBCZPkeBdwYwrBlWlRU_4cWzEbGPgEOWzJ-2lWmXWGzRgbAisIv9yDNBcLccfqE7VFj8gZiFT0la4zuEedW5tRjPOg-I6vhRQLSWg4JpOsvzoPf0W0ymLRb2te9oYEELj1sIJtiFYce_ZVQYgIJAJxhPNRtXVBNn1Zn7jSdeZoKv4bbgWC9diWqrU24N1QkgzLl3fw0Po9dsc0xm6aZ1VTfjhE>\r\n\r\nX Page <https://notifications.google.com/g/p/ANiao5pGh4l-3tD_UsbiL0B0aC90Rtfj1jr5j1KX4KuOHCA_OFfltC160iG_nGOb6Mv-0bXV3tMOZYgoR1Yf3klwvIfm8cM5ygqLe5VkN6VFVRzle6pIQ2mMK9_q05KcAIJVMJBjzoOXmkB6k0FZyx70fCqmHKqJBSjeFs-hQ_y9zet9rWeogDI5uORITfAR7L9auJ1o9EtsITI8q5cT0uzfycO6KjemvvacQ44>\r\n\r\nWas this email helpful?\r\n\r\n<https://notifications.google.com/g/p/ANiao5qK0FRNQbPg2tBAeoLIkMYzEMaok7E-PhVK35n1pC8g-vr1NB_3Mt-cUSPWlE1RYXvoG-8Hv1KW1jzQv-lqH-YtnJOBfMBXR0mBXP1sySwC0XO5gahysCscl6Fp3Lu22KUX8VegDNshMRFxI4D25cVVNCLGj7C43mgZ-_h4XtG6FRBK1KDPlV0-FgoUUfTCVtFXZNB-DRMK6DlQm1XBiq66HnC0U7EvFqFWznd0s-j0M83bqiZLhlpu5x3fXXaidtdQjTduLk3PqlmgZmx5v2GP6YOZh0s01X2kqL8IgSNuVHL9sHX9vulf6YFPHKNBtWmG3g5ja62-XVgtUBZ6iZBS79eZ402x5qOEj7KAgczWY2AtxUI1Fe730lXxMpOJ>\r\n\r\n<https://notifications.google.com/g/p/ANiao5pAOjMUPIOhuU7851dkIXBUYHmkgkiSpKn9NO6FE3rl1TkOL_5UUcHTGhZV2UUQj99tL1DsiB8_KjS8oVIoxLs8l8RKn_NX56akMCiiZ-wbmhQvJ56efSkLWtR6PmSAT60l4GXQuD5avGCRmJOlNsQsC0085dvysCOCiXehKqoSspE5S9njlMZ1x5BpHK6Qh4u6knorz1H_VHjPPnjEWgEvP52FohN2Q5Qhi1GypK9uPDtBmPUcAIpZA8IZJCig9nvxnGSKDiozhpaRs66A6_qIm6j4BWj2VIz0GC-xBNTxvyVKkMQJzXAZT3geBH9gGWzX5QzkQVyMDjBTNieO_FIv-ebhKIykG-A9-fyWXKMV2FPjdH3p5fc_jZ5Xvhc>\r\n\r\n<https://notifications.google.com/g/p/ANiao5oYfog1j0lK09N6HaGEU3lzhWkTnxb8egg3Ps2vM6Bt-3j3Owzf88990nW3ypRFyhYfcwB1XT3qZnvhWaG4RCcwYLiLBpRiJi-DzLFTUH9r9Ag0s6NAIJUUHPXYhM891J9CWDhDq_XGKCZn3oJKNz2Kj7t09cKOub7oJFwuA99NTwPQwC8WDtjUIMnFaoWzAB5mCDpdBjN4EdM74Ztl6it71MgJzL613S7oy-aBpEYEfQXf4--_n2livPabkZ1zfF9aS_g7fUxKW4p6FOEiTyd7ywlFD6sKy5y9WcruQoJHGCdv9wOyE-l0nV9S_-L-xScEujts2ObpqQ37FKy92o4UWKgo5TWsjFJy2aOv0-EtxJmVMTD-uN8u3RnKcAhoOjeX3Q>\r\n\r\n(c) 2025 Google India Digital Services Private Limited,\r\n5th Floor, Dlf Centre,\r\nBlock 124 Narindra Place,\r\nSansad Marg Delhi 110001\r\n\r\nYou have received this mandatory email service announcement in connection with your use of Google Pay.\r\n",
+    "date": "2025-01-02T19:03:46-08:00"
+  },
+  {
+    "id": "NM616342E5D09214009adobein_mid_prod8@mail.adobe.com",
+    "toAddresses": [
+      {
+        "name": "",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "Adobe Express",
+        "address": "mail@mail.adobe.com"
+      }
+    ],
+    "subject": "Start your year strong, with a fresh new CV!",
+    "body": "View web version:\r\nhttps://t-info.mail.adobe.com/r/?id=t837469c7,fe7f09c0,c01e78a8&e=cDE9JTQwYk1ib3dtT0Rmajg0UUJjR3V2Z0pDM0xsZXlNZ2cwS01WWWZlUGY4OEVIQSUzRA&s=LpZS2RNi-18tAHcM1vYCGOngBpk8XH2WT-16tcdUyuQ\r\n\r\nUnfortunately, your email client cannot display HTML or your settings are turned off. To view this email, please click or copy and paste the link above into your browser.\r\n******************************************************************\r\nThis is a marketing email from Adobe Systems Software Ireland Limited, 4-6 Riverwalk, Citywest Business Park, Dublin 24, Ireland.\r\n\r\nClick on the following link to unsubscribe, or send us an unsubscribe request to the postal address above.\r\nClick&nbsp;here:  https://t-info.mail.adobe.com/r/?id=t837469c7,fe7f09c0,c01e78a9&e=cDE9JTQwMmlLV2s0S292QnQzJTJGWkh4SVM5WWtYMXFad3MyUkFOeDh4ZyUyRnhPR2dyNlklM0QmcDI9JmxvYz1pbiZwMz0yMQ&s=d6LDzrjukH02g9VHeAWZX0CY57g1XcNjeuEd8ZkLpfw  \r\n\r\nPlease review the Adobe Privacy Policy.\r\nhttps://t-info.mail.adobe.com/r/?id=t837469c7,fe7f09c0,c01e78aa\r\n\r\nTo ensure future delivery of email, please add mail@mail.adobe.com to your address book, contacts, or safe senders list.\r\nhttps://t-info.mail.adobe.com/r/?id=t837469c7,fe7f09c0,c01e78ab\r\n\r\nPlease do not reply to this message. To contact Adobe,find options online.\r\nhttps://t-info.mail.adobe.com/r/?id=t837469c7,fe7f09c0,c01e78ac\r\n",
+    "date": "2025-01-01T14:44:27-08:00"
+  },
+  {
+    "id": "142299754369385691a48359@mlsend.com",
+    "toAddresses": [
+      {
+        "name": "amaradya143@gmail.com",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "BlueFx Video Templates",
+        "address": "support@bluefx.net"
+      }
+    ],
+    "subject": "Last Call",
+    "body": "Hello,\r\n\r\nYou have received a newsletter from Bluefx.\r\n\r\nHowever, your email software can't display HTML emails. You can view the newsletter by clicking here:\r\n\r\nhttps://bgmap.clicks.mlsend.com/td/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MjI5OTc0MzA3ODMxOTk0NCxcInJcIjoxNDIyOTk3NTQzNjkzODU2OTF9IiwicyI6IjNhNjNlY2FkYzM4ZDcwZTcifQ\r\n\r\n\r\n\r\nYou're receiving this newsletter because you have shown interest in Bluefx.\r\nNot interested anymore? Click here to unsubscribe:\r\nhttps://bgmap.clicks.mlsend.com/td/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MjI5OTc0MzA3NTE3NDIxNCxcInJcIjoxNDIyOTk3NTQzNjkzODU2OTF9IiwicyI6IjRlMmM4N2YyNzJhZTgwMzUifQ\r\n",
+    "date": "2025-01-01T05:01:14+00:00"
+  },
+  {
+    "id": "142280879703590304a48359@mlsend.com",
+    "toAddresses": [
+      {
+        "name": "amaradya143@gmail.com",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "BlueFx Video Templates",
+        "address": "support@bluefx.net"
+      }
+    ],
+    "subject": "The END",
+    "body": "Hello,\r\n\r\nYou have received a newsletter from Bluefx.\r\n\r\nHowever, your email software can't display HTML emails. You can view the newsletter by clicking here:\r\n\r\nhttps://bgmap.clicks.mlsend.com/tj/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MjI4MDg2ODEyMTAyMDMyNSxcInJcIjoxNDIyODA4Nzk3MDM1OTAzMDR9IiwicyI6ImUxODVlMGRmOGE4YTVmZDQifQ\r\n\r\n\r\n\r\nYou're receiving this newsletter because you have shown interest in Bluefx.\r\nNot interested anymore? Click here to unsubscribe:\r\nhttps://bgmap.clicks.mlsend.com/tj/cl/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MjI4MDg2ODExNzg3NDU5NCxcInJcIjoxNDIyODA4Nzk3MDM1OTAzMDR9IiwicyI6ImJlNGZiODc2NTFmNGU4ZGEifQ\r\n",
+    "date": "2025-01-01T00:01:04+00:00"
+  },
+  {
+    "id": "142258236725134867a48359@mlsend.com",
+    "toAddresses": [
+      {
+        "name": "amaradya143@gmail.com",
+        "address": "amaradya143@gmail.com"
+      }
+    ],
+    "fromAddresses": [
+      {
+        "name": "BlueFx Video Templates",
+        "address": "support@bluefx.net"
+      }
+    ],
+    "subject": "GONE in 15h",
+    "body": "Hello,\r\n\r\nYou have received a newsletter from Bluefx.\r\n\r\nHowever, your email software can't display HTML emails. You can view the newsletter by clicking here:\r\n\r\nhttps://bgmap.clicks.mlsend.com/tf/c/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MjI1ODIyMzgyMDMxMDIzOSxcInJcIjoxNDIyNTgyMzY3MjUxMzQ4Njd9IiwicyI6ImI4NzIyMzYzYWFjZjA5ZTgifQ\r\n\r\n\r\n\r\nYou're receiving this newsletter because you have shown interest in Bluefx.\r\nNot interested anymore? Click here to unsubscribe:\r\nhttps://bgmap.clicks.mlsend.com/tf/c/eyJ2Ijoie1wiYVwiOjQ4MzU5LFwibFwiOjE0MjI1ODIyMzgxODIxMzA4NSxcInJcIjoxNDIyNTgyMzY3MjUxMzQ4Njd9IiwicyI6IjIxMjllYThjMjAzNmIyNGUifQ\r\n",
+    "date": "2024-12-31T18:01:35+00:00"
+  }
+]
