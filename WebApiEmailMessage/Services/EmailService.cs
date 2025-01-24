@@ -1,6 +1,8 @@
 ﻿using MailKit;
 using MailKit.Net.Imap;
 using MimeKit;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 using WebApiEmailMessage.Models;
 
 namespace WebApiEmailMessage.Services;
@@ -70,79 +72,164 @@ public class EmailService : IEmailService
         emailClient.AuthenticationMechanisms.Remove("NTLM");
         emailClient.Authenticate(username, password);
 
-        var inbox = emailClient.Inbox;
-        await inbox.OpenAsync(FolderAccess.ReadOnly); // Use ReadOnly for fetching emails
-
         List<EmailMessage> messages = new List<EmailMessage>();
-        int totalMessages = inbox.Count;
-
-        // Fetch all email summaries
-        var summaries = await inbox.FetchAsync(0, -1, MessageSummaryItems.Full | MessageSummaryItems.UniqueId);
-
-        // Sort summaries by date in descending order
-        var sortedSummaries = summaries
-            .Where(summary => summary.Date != null)
-            .OrderByDescending(summary => summary.Date)
-            .ToList();
-
-        // Paginate
-        int startIndex = (pageNumber - 1) * pageSize;
-        int endIndex = Math.Min(startIndex + pageSize, sortedSummaries.Count);
-
-        // Ensure start index is within bounds
-        if (startIndex < sortedSummaries.Count)
+        var folders = emailClient.GetFolders(emailClient.PersonalNamespaces.First());
+        if (folders.Any())
         {
-            for (int i = startIndex; i < endIndex; i++)
+            foreach (var folder in folders)
             {
-                var summary = sortedSummaries[i];
-                var item = await inbox.GetMessageAsync(summary.UniqueId); // Fetch the email message
-
-                var emailMessage = new EmailMessage
+                if (folder.Name == "All Mail")
                 {
-                    Id = item.MessageId,
-                    Subject = item.Subject,
-                    Body = string.IsNullOrEmpty(item.TextBody) ? item.HtmlBody : item.TextBody,
-                    Date = item.Date,
-                };
-                messages.Add(emailMessage);
-                emailMessage.ToAddresses.AddRange(item.To.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
-                emailMessage.FromAddresses.AddRange(item.From.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
-                emailMessage.CcAddresses.AddRange(item.Cc.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
-                emailMessage.BccAddresses.AddRange(item.Bcc.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
+                    //var inbox = emailClient.Inbox;
+                    await folder.OpenAsync(FolderAccess.ReadOnly); // Use ReadOnly for fetching emails
 
-                foreach (var attachment in item.Attachments)
-                {
-                    if (attachment is MimeKit.MimePart mimePart)
+
+                    int totalMessages = folder.Count;
+
+                    // Fetch all email summaries
+                    var summaries = await folder.FetchAsync(0, -1, MessageSummaryItems.Full | MessageSummaryItems.UniqueId);
+
+                    // Sort summaries by date in descending order
+                    var sortedSummaries = summaries
+                        .Where(summary => summary.Date != null)
+                        .OrderByDescending(summary => summary.Date)
+                        .ToList();
+
+                    // Paginate
+                    int startIndex = (pageNumber - 1) * pageSize;
+                    int endIndex = Math.Min(startIndex + pageSize, sortedSummaries.Count);
+
+
+
+
+                    var serializableSummaries = sortedSummaries.Select(summary => new
                     {
-                        var fileName = mimePart.FileName;
-
-                        // Optional: Save the file locally
-                        string filePath = Path.Combine("attachments", fileName);
-                        Directory.CreateDirectory("attachments"); // Ensure directory exists
-                        using (var stream = File.Create(filePath))
+                        Subject = summary.Envelope?.Subject,
+                        UniqueId = summary.UniqueId.ToString(),
+                        Date = summary.Date.ToString("o"), // ISO 8601 format
+                        From = summary.Envelope?.From?.ToString(),
+                        To = summary.Envelope?.To?.Select(x => x.ToString()).ToList(),
+                        Cc = summary.Envelope?.Cc?.Select(x => x.ToString()).ToList(),
+                        Bcc = summary.Envelope?.Bcc?.Select(x => x.ToString()).ToList(),
+                        Attachments = summary.Attachments?.Select(a => new
                         {
-                            await mimePart.Content.DecodeToAsync(stream);
+                            FileName = a.ContentDisposition?.FileName,
+                            MimeType = a.ContentType?.MimeType
+                        }).ToList()
+                    }).ToList();
+
+                    var options = new JsonSerializerOptions
+                    {
+                        WriteIndented = true,
+                        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                    };
+
+                    string jsonData = JsonSerializer.Serialize(serializableSummaries, options);
+
+                    // Optional: Save JSON to file
+                    await File.WriteAllTextAsync("email_summaries.json", jsonData);
+
+
+
+
+
+                    // Ensure start index is within bounds
+                    if (startIndex < sortedSummaries.Count)
+                    {
+                        for (int i = startIndex; i < endIndex; i++)
+                        {
+                            var summary = sortedSummaries[i];
+
+
+                            var a = summary.Envelope.ReplyTo;
+
+                            var item = await folder.GetMessageAsync(summary.UniqueId); // Fetch the email message
+
+
+
+                            var emailMessage = new EmailMessage
+                            {
+                                Id = item.MessageId,
+                                Subject = item.Subject,
+                                Body = string.IsNullOrEmpty(item.TextBody) ? item.HtmlBody : item.TextBody,
+                                Date = item.Date,
+
+
+
+
+                                IsReply = !string.IsNullOrEmpty(item.Headers["In-Reply-To"]), // Check for In-Reply-To header
+                                IsForward = item.Subject?.ToLowerInvariant().StartsWith("fw:") == true || item.Subject?.ToLowerInvariant().StartsWith("fwd:") == true, // Check subject prefix (case-insensitive)
+                                OriginalMessageId = item.Headers["In-Reply-To"]?.ToLowerInvariant(), // Convert In-Reply-To header to lowercase
+                            };
+
+
+                            //var emailMessage = new EmailMessage
+                            //{
+                            //    Id = item.MessageId,
+                            //    Subject = item.Subject,
+                            //    Body = string.IsNullOrEmpty(item.TextBody) ? item.HtmlBody : item.TextBody,
+                            //    Date = item.Date,
+                            //};
+                            messages.Add(emailMessage);
+                            emailMessage.ToAddresses.AddRange(item.To.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
+                            emailMessage.FromAddresses.AddRange(item.From.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
+                            emailMessage.CcAddresses.AddRange(item.Cc.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
+                            emailMessage.BccAddresses.AddRange(item.Bcc.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
+
+                            foreach (var attachment in item.Attachments)
+                            {
+                                if (attachment is MimePart mimePart)
+                                {
+                                    var fileName = mimePart.FileName;
+
+                                    // Optional: Save the file locally
+                                    string filePath = Path.Combine("attachments", fileName);
+                                    Directory.CreateDirectory("attachments"); // Ensure directory exists
+                                    using (var stream = File.Create(filePath))
+                                    {
+                                        await mimePart.Content.DecodeToAsync(stream);
+                                    }
+
+                                    // Calculate the size of the attachment
+                                    long size = mimePart.Content.Stream?.Length ?? 0;
+
+                                    emailMessage.Attachments.Add(new EmailAttachment
+                                    {
+                                        FileName = fileName,
+                                        FilePath = filePath,
+                                        Size = size, // Use calculated size
+                                        ContentType = mimePart.ContentType.MimeType
+                                    });
+                                }
+                            }
                         }
-
-                        // Calculate the size of the attachment
-                        long size = mimePart.Content.Stream?.Length ?? 0;
-
-                        emailMessage.Attachments.Add(new EmailAttachment
-                        {
-                            FileName = fileName,
-                            FilePath = filePath,
-                            Size = size, // Use calculated size
-                            ContentType = mimePart.ContentType.MimeType
-                        });
                     }
+
+                    emailClient.Disconnect(true);
                 }
             }
         }
-
-        emailClient.Disconnect(true);
         return messages;
-    }
 
+    }
+    public async Task SaveSummariesToJsonAsync(IList<IMessageSummary> sortedSummaries, string filePath)
+    {
+
+
+        // Convert to JSON
+        var options = new JsonSerializerOptions
+        {
+            WriteIndented = true,
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+        };
+
+        string jsonData = JsonSerializer.Serialize(sortedSummaries, options);
+
+        // Write JSON to file
+        await File.WriteAllTextAsync(filePath, jsonData);
+
+        Console.WriteLine($"Summaries saved to {filePath}");
+    }
     public async Task<List<string>> GetAllFolders()
     {
         using var emailClient = new ImapClient();

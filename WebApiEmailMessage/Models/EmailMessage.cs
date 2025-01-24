@@ -17,7 +17,12 @@ public class EmailMessage
     public List<EmailAddress> CcAddresses { get; set; }
     public List<EmailAddress> BccAddresses { get; set; }
     public List<EmailAttachment> Attachments { get; set; }
+    public string Flags { get; set; }
     public string Subject { get; set; }
     public string Body { get; set; }
     public DateTimeOffset Date { get; set; }
+    public bool IsReply { get; set; }
+    public bool IsForward { get; set; }
+    public string OriginalMessageId { get; set; }
+    public List<string> References { get; set; } = new();
 }

@@ -28,4 +28,13 @@ public class EmailController(IEmailService _emailService) : ControllerBase
         var emails = await _emailService.GetAllFoldersWithDetails();
         return Ok(emails);
     }
+    
+    [HttpGet("date-time")]
+    public async Task<IActionResult> GetDateTime()
+    {
+        var data = $"{DateTimeOffset.Now} \n {DateTimeOffset.UtcNow}";
+        var data1 = DateTimeOffset.Now;
+
+        return Ok(new { DateTimeOffset.Now , DateTimeOffset.UtcNow });
+    }
 }
