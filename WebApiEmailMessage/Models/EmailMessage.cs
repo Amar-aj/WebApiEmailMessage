@@ -11,7 +11,8 @@ public class EmailMessage
         Attachments = new List<EmailAttachment>();
     }
 
-    public string Id { get; set; }
+    public long UniqueId { get; set; }
+    public string MessageId { get; set; }
     public List<EmailAddress> ToAddresses { get; set; }
     public List<EmailAddress> FromAddresses { get; set; }
     public List<EmailAddress> CcAddresses { get; set; }

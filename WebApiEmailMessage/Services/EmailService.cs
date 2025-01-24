@@ -46,7 +46,7 @@ public class EmailService : IEmailService
             {
                 var emailMessage = new EmailMessage
                 {
-                    Id = item.MessageId,
+                    MessageId = item.MessageId,
                     Subject = item.Subject,
                     Body = string.IsNullOrEmpty(item.TextBody) ? item.HtmlBody : item.TextBody,
                     Date = item.Date,
@@ -102,32 +102,32 @@ public class EmailService : IEmailService
 
 
 
-                    var serializableSummaries = sortedSummaries.Select(summary => new
-                    {
-                        Subject = summary.Envelope?.Subject,
-                        UniqueId = summary.UniqueId.ToString(),
-                        Date = summary.Date.ToString("o"), // ISO 8601 format
-                        From = summary.Envelope?.From?.ToString(),
-                        To = summary.Envelope?.To?.Select(x => x.ToString()).ToList(),
-                        Cc = summary.Envelope?.Cc?.Select(x => x.ToString()).ToList(),
-                        Bcc = summary.Envelope?.Bcc?.Select(x => x.ToString()).ToList(),
-                        Attachments = summary.Attachments?.Select(a => new
-                        {
-                            FileName = a.ContentDisposition?.FileName,
-                            MimeType = a.ContentType?.MimeType
-                        }).ToList()
-                    }).ToList();
-
-                    var options = new JsonSerializerOptions
-                    {
-                        WriteIndented = true,
-                        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-                    };
-
-                    string jsonData = JsonSerializer.Serialize(serializableSummaries, options);
-
-                    // Optional: Save JSON to file
-                    await File.WriteAllTextAsync("email_summaries.json", jsonData);
+                    // var serializableSummaries = sortedSummaries.Select(summary => new
+                    // {
+                    //     Subject = summary.Envelope?.Subject,
+                    //     UniqueId = summary.UniqueId.ToString(),
+                    //     Date = summary.Date.ToString("o"), // ISO 8601 format
+                    //     From = summary.Envelope?.From?.ToString(),
+                    //     To = summary.Envelope?.To?.Select(x => x.ToString()).ToList(),
+                    //     Cc = summary.Envelope?.Cc?.Select(x => x.ToString()).ToList(),
+                    //     Bcc = summary.Envelope?.Bcc?.Select(x => x.ToString()).ToList(),
+                    //     Attachments = summary.Attachments?.Select(a => new
+                    //     {
+                    //         FileName = a.ContentDisposition?.FileName,
+                    //         MimeType = a.ContentType?.MimeType
+                    //     }).ToList()
+                    // }).ToList();
+                    //
+                    // var options = new JsonSerializerOptions
+                    // {
+                    //     WriteIndented = true,
+                    //     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                    // };
+                    //
+                    // string jsonData = JsonSerializer.Serialize(serializableSummaries, options);
+                    //
+                    // // Optional: Save JSON to file
+                    // await File.WriteAllTextAsync("email_summaries.json", jsonData);
 
 
 
@@ -141,7 +141,7 @@ public class EmailService : IEmailService
                             var summary = sortedSummaries[i];
 
 
-                            var a = summary.Envelope.ReplyTo;
+                            var a = summary.IsReply;
 
                             var item = await folder.GetMessageAsync(summary.UniqueId); // Fetch the email message
 
@@ -149,27 +149,23 @@ public class EmailService : IEmailService
 
                             var emailMessage = new EmailMessage
                             {
-                                Id = item.MessageId,
+                                UniqueId = summary.UniqueId.Id,
+                                MessageId = item.MessageId,
                                 Subject = item.Subject,
                                 Body = string.IsNullOrEmpty(item.TextBody) ? item.HtmlBody : item.TextBody,
                                 Date = item.Date,
+                                IsReply = summary.IsReply,
+                               
 
 
 
-
-                                IsReply = !string.IsNullOrEmpty(item.Headers["In-Reply-To"]), // Check for In-Reply-To header
+                                // IsReply = !string.IsNullOrEmpty(item.Headers["In-Reply-To"]), // Check for In-Reply-To header
                                 IsForward = item.Subject?.ToLowerInvariant().StartsWith("fw:") == true || item.Subject?.ToLowerInvariant().StartsWith("fwd:") == true, // Check subject prefix (case-insensitive)
                                 OriginalMessageId = item.Headers["In-Reply-To"]?.ToLowerInvariant(), // Convert In-Reply-To header to lowercase
                             };
 
 
-                            //var emailMessage = new EmailMessage
-                            //{
-                            //    Id = item.MessageId,
-                            //    Subject = item.Subject,
-                            //    Body = string.IsNullOrEmpty(item.TextBody) ? item.HtmlBody : item.TextBody,
-                            //    Date = item.Date,
-                            //};
+        
                             messages.Add(emailMessage);
                             emailMessage.ToAddresses.AddRange(item.To.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
                             emailMessage.FromAddresses.AddRange(item.From.Select(x => (MailboxAddress)x).Select(x => new EmailAddress { Address = x.Address, Name = x.Name }));
