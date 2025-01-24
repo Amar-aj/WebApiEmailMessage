@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.idea/.idea.WebApiEmailMessage/.idea/encodings.xml
+/.idea/.idea.WebApiEmailMessage/.idea/indexLayout.xml
+/.idea/.idea.WebApiEmailMessage/.idea/vcs.xml
