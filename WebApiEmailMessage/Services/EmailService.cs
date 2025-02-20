@@ -70,7 +70,6 @@ public class EmailService : IEmailService
     public async Task<List<EmailMessage>> GetEmails(int pageNumber = 1, int pageSize = 20)
     {
         var messages = new List<EmailMessage>();
-        var lockObject = new object();
 
         using var emailClient = new ImapClient();
         var username = _emailConfig.ImapUsername;
@@ -82,7 +81,7 @@ public class EmailService : IEmailService
         await emailClient.AuthenticateAsync(username, password);
 
         var folders = await emailClient.GetFoldersAsync(emailClient.PersonalNamespaces.First());
-        var tasks = folders.Where(folder => folder.Name == "All Mail").Select(folder => ProcessFolderAsync(folder, pageNumber, pageSize, lockObject, username)).ToList();
+        var tasks = folders.Where(folder => folder.Name == "All Mail").Select(folder => ProcessFolderAsync(emailClient, folder, pageNumber, pageSize, username)).ToList();
 
         var results = await Task.WhenAll(tasks);
         foreach (var result in results)
@@ -94,11 +93,14 @@ public class EmailService : IEmailService
         return messages;
     }
 
-    private async Task<List<EmailMessage>> ProcessFolderAsync(IMailFolder folder, int pageNumber, int pageSize, object lockObject, string username)
+    private async Task<List<EmailMessage>> ProcessFolderAsync(ImapClient emailClient, IMailFolder folder, int pageNumber, int pageSize, string username)
     {
         var messages = new List<EmailMessage>();
 
-        await folder.OpenAsync(FolderAccess.ReadOnly);
+        lock (emailClient.SyncRoot)
+        {
+            folder.Open(FolderAccess.ReadOnly);
+        }
 
         int totalMessages = folder.Count;
         int startIndex = (pageNumber - 1) * pageSize;
@@ -106,9 +108,13 @@ public class EmailService : IEmailService
 
         if (startIndex < totalMessages)
         {
-            var summaries = await folder.FetchAsync(startIndex, endIndex, MessageSummaryItems.UniqueId | MessageSummaryItems.Envelope);
-            var tasks = summaries.Select(summary => GetEmailMessageAsync(folder, summary, lockObject)).ToList();
+            IList<IMessageSummary> summaries;
+            lock (emailClient.SyncRoot)
+            {
+                summaries = folder.Fetch(startIndex, endIndex, MessageSummaryItems.UniqueId | MessageSummaryItems.Envelope);
+            }
 
+            var tasks = summaries.Select(summary => GetEmailMessageAsync(emailClient, folder, summary)).ToList();
             var emailMessages = await Task.WhenAll(tasks);
             messages.AddRange(emailMessages);
 
@@ -121,10 +127,10 @@ public class EmailService : IEmailService
         return messages;
     }
 
-    private async Task<EmailMessage> GetEmailMessageAsync(IMailFolder folder, IMessageSummary summary, object lockObject)
+    private async Task<EmailMessage> GetEmailMessageAsync(ImapClient emailClient, IMailFolder folder, IMessageSummary summary)
     {
         MimeMessage item;
-        lock (lockObject)
+        lock (emailClient.SyncRoot)
         {
             item = folder.GetMessage(summary.UniqueId);
         }
