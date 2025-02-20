@@ -82,50 +82,42 @@ public class EmailService : IEmailService
         await emailClient.AuthenticateAsync(username, password);
 
         var folders = await emailClient.GetFoldersAsync(emailClient.PersonalNamespaces.First());
-        if (folders.Any())
+        var tasks = folders.Where(folder => folder.Name == "All Mail").Select(folder => ProcessFolderAsync(folder, pageNumber, pageSize, lockObject, username)).ToList();
+
+        var results = await Task.WhenAll(tasks);
+        foreach (var result in results)
         {
-            foreach (var folder in folders)
-            {
-                if (folder.Name == "All Mail")
-                {
-                    await folder.OpenAsync(FolderAccess.ReadOnly);
-
-                    int totalMessages = folder.Count;
-                    var summaries = await folder.FetchAsync(0, -1, MessageSummaryItems.UniqueId | MessageSummaryItems.Envelope);
-                    var sortedSummaries = summaries
-                        .Where(summary => summary.Date != null)
-                        .OrderByDescending(summary => summary.Date)
-                        .ToList();
-
-                    int startIndex = (pageNumber - 1) * pageSize;
-                    int endIndex = Math.Min(startIndex + pageSize, sortedSummaries.Count);
-
-                    if (startIndex < sortedSummaries.Count)
-                    {
-                        var tasks = new List<Task<EmailMessage>>();
-                        for (int i = startIndex; i < endIndex; i++)
-                        {
-                            var summary = sortedSummaries[i];
-                            tasks.Add(GetEmailMessageAsync(folder, summary, lockObject));
-                        }
-
-                        var emailMessages = await Task.WhenAll(tasks);
-                        messages.AddRange(emailMessages);
-
-                        // Publish to Kafka in batches
-                        var topic = $"email/{username}";
-                        var kafkaTasks = emailMessages.Select(emailMessage =>
-                        {
-                            var message = JsonSerializer.Serialize(emailMessage);
-                            return _kafkaProducerService.ProduceAsync(topic, message);
-                        });
-                        await Task.WhenAll(kafkaTasks);
-                    }
-
-                    await emailClient.DisconnectAsync(true);
-                }
-            }
+            messages.AddRange(result);
         }
+
+        await emailClient.DisconnectAsync(true);
+        return messages;
+    }
+
+    private async Task<List<EmailMessage>> ProcessFolderAsync(IMailFolder folder, int pageNumber, int pageSize, object lockObject, string username)
+    {
+        var messages = new List<EmailMessage>();
+
+        await folder.OpenAsync(FolderAccess.ReadOnly);
+
+        int totalMessages = folder.Count;
+        int startIndex = (pageNumber - 1) * pageSize;
+        int endIndex = Math.Min(startIndex + pageSize, totalMessages - 1);
+
+        if (startIndex < totalMessages)
+        {
+            var summaries = await folder.FetchAsync(startIndex, endIndex, MessageSummaryItems.UniqueId | MessageSummaryItems.Envelope);
+            var tasks = summaries.Select(summary => GetEmailMessageAsync(folder, summary, lockObject)).ToList();
+
+            var emailMessages = await Task.WhenAll(tasks);
+            messages.AddRange(emailMessages);
+
+            // Batch Kafka messages
+            //var topic = $"email/{username}";
+            //var kafkaMessages = emailMessages.Select(emailMessage => JsonSerializer.Serialize(emailMessage)).ToList();
+            //await _kafkaProducerService.ProduceBatchAsync(topic, kafkaMessages);
+        }
+
         return messages;
     }
 
