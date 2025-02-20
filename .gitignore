@@ -364,3 +364,4 @@ FodyWeavers.xsd
 /.idea/.idea.WebApiEmailMessage/.idea/encodings.xml
 /.idea/.idea.WebApiEmailMessage/.idea/indexLayout.xml
 /.idea/.idea.WebApiEmailMessage/.idea/vcs.xml
+/WebApiEmailMessage/appsettings.json
