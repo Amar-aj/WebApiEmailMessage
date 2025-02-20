@@ -16,10 +16,17 @@ public class EmailController(IEmailService _emailService) : ControllerBase
     //    return Ok(emails);
     //}
 
-    [HttpGet]
+    [HttpGet("kafka-producer")]
     public async Task<IActionResult> GetEmails(int pageNumber = 1, int pageSize = 20)
     {
         var emails = await _emailService.GetEmails(pageNumber, pageSize);
+        return Ok(emails);
+    }
+
+    [HttpGet("kafka-consumer")]
+    public async Task<IActionResult> GetEmailsFromKafka(int pageNumber = 1, int pageSize = 20)
+    {
+        var emails = await _emailService.GetAllConsumers("", pageNumber, pageSize);
         return Ok(emails);
     }
     [HttpGet("folders")]
@@ -28,13 +35,13 @@ public class EmailController(IEmailService _emailService) : ControllerBase
         var emails = await _emailService.GetAllFoldersWithDetails();
         return Ok(emails);
     }
-    
+
     [HttpGet("date-time")]
     public async Task<IActionResult> GetDateTime()
     {
         var data = $"{DateTimeOffset.Now} \n {DateTimeOffset.UtcNow}";
         var data1 = DateTimeOffset.Now;
 
-        return Ok(new { DateTimeOffset.Now , DateTimeOffset.UtcNow });
+        return Ok(new { DateTimeOffset.Now, DateTimeOffset.UtcNow });
     }
 }

@@ -10,16 +10,14 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<ProducerService>();
+builder.Services.AddHostedService<ConsumerService>();
 
+// Register ConsumerService for dependency injection
+builder.Services.AddSingleton<ConsumerService>();
 
 builder.Services.AddSingleton<IEmailConfiguration>(builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
 builder.Services.AddTransient<IEmailService, EmailService>();
-
-
-
-
-
-
 
 var app = builder.Build();
 
